@@ -12,9 +12,13 @@ $form = Loader::helper('form');
 			foreach($themeHandles as $theme){ 
 				$themeName = $theme->getThemeName();
 				$themeHandle = $theme->getThemeHandle();
-			?>
-			<option value="<?php   echo $themeHandle ?>"<?php   if ($themeHandle == $selectedTheme){echo ' selected=\'selected\'';}?>><?php echo $themeName;?></option>
-			<?php } ?>
+				$selected = '';
+				if($themeHandle == $selectedTheme) {
+					$selected = ' selected="selected"';
+				}
+				
+				echo '<option value="'.$themeHandle.'"'.$selected.'>'.$themeName.'</option>';
+			} ?>
 		</select>
 	</form>
 </div>
