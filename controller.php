@@ -9,7 +9,7 @@ class ThemeSwitcherPackage extends Package {
 	protected $pkgVersion = '1.3';
 	
 	public function getPackageDescription() {
-		return t("Block to switch themes..");
+		return t("Block to switch themes.");
 	}
 	
 	public function getPackageName() {
@@ -24,10 +24,7 @@ class ThemeSwitcherPackage extends Package {
 		
 	}
 	public function on_start() {
-	Events::extend('on_start', 'ThemeSwitcher', 'checkForTheme', './packages/theme_switcher/models/theme_switcher.php');
+		Events::extend('on_start', 'ThemeSwitcher', 'checkForTheme', './packages/'.$this->pkgHandle.'/models/theme_switcher.php');
 	}
-
-
-
 
 }
