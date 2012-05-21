@@ -1,7 +1,4 @@
-<?php    defined('C5_EXECUTE') or die(_("Access Denied.")); ?>
-<style type="text/css">
+<?php defined('C5_EXECUTE') or die("Access Denied.");
 
-</style>
-
-<?php   echo $form->label('title', 'Name');?>
-<?php   echo $form->text('title', $title, array('style' => 'width: 320px'));?>
+echo $form->label('title', t('Name:'.'&nbsp;'));
+echo $form->text('title', $title, array('style' => 'width: 220px'));
