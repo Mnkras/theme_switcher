@@ -23,6 +23,7 @@ class ThemeSwitcherPackage extends Package {
 		BlockType::installBlockTypeFromPackage('theme_switcher', $pkg);
 		
 	}
+
 	public function on_start() {
 		Events::extend('on_start', 'ThemeSwitcher', 'checkForTheme', './packages/'.$this->pkgHandle.'/models/theme_switcher.php');
 	}
