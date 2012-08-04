@@ -25,9 +25,9 @@ class ThemeSwitcherBlockController extends BlockController {
 	
 	public function view(){
 		//if the cookie exists set the theme
-		if($_COOKIE['ccmUserTheme']) {
-			$theme = $_COOKIE['ccmUserTheme'];
-			if(!in_array($_COOKIE['ccmUserTheme'], ThemeSwitcher::getThemeHandles())) {
+		if($_COOKIE[THEME_SWITCHER_THEME]) {
+			$theme = $_COOKIE[THEME_SWITCHER_THEME];
+			if(!in_array($theme, ThemeSwitcher::getThemeHandles(true))) {
 				$theme = PageTheme::getSiteTheme()->getThemeHandle();
 			}
 			$this->set('selectedTheme', $theme);

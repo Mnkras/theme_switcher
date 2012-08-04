@@ -4,7 +4,7 @@ class ThemeSwitcherPackage extends Package {
 
 	protected $pkgHandle = 'theme_switcher';
 	protected $appVersionRequired = '5.4.0';
-	protected $pkgVersion = '1.4';
+	protected $pkgVersion = '1.5';
 
 	public function getPackageName() {
 		return t("Theme Switcher");
@@ -22,6 +22,7 @@ class ThemeSwitcherPackage extends Package {
 	}
 
 	public function on_start() {
+		define('THEME_SWITCHER_THEME', 'ccmUserTheme');
 		Events::extend('on_start', 'ThemeSwitcher', 'checkForTheme', './packages/'.$this->pkgHandle.'/models/theme_switcher.php');
 	}
 

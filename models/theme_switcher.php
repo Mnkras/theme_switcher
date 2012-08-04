@@ -15,23 +15,30 @@ class ThemeSwitcher {
 				$theme = PageTheme::getByHandle($_GET['t']);
 				self::setThemeCookie($_GET['t']);
 				$view->setTheme($theme);
-			} else if($_COOKIE['ccmUserTheme']) {
-				$theme = PageTheme::getByHandle($_COOKIE['ccmUserTheme']);
+			} else if($_COOKIE[THEME_SWITCHER_THEME]) {
+				$theme = PageTheme::getByHandle($_COOKIE[THEME_SWITCHER_THEME]);
 				$view->setTheme($theme);
 			}
 		}
 	}
 	
 	public static function setThemeCookie($theme = false) {
-		setcookie("ccmUserTheme", $theme, time() + 1209600, DIR_REL . '/');	
+		setcookie(THEME_SWITCHER_THEME, $theme, time() + 1209600, DIR_REL . '/');	
 	}
 	
-	public static function getThemeHandles() {
+	public static function getThemeHandles($handles = false) {
 		 Loader::model('page_theme'); 
 		//get the list of themes		
 		$themeHandles = PageTheme::getList();
-		//reverse the array
-		return array_reverse($themeHandles);
+		if(!$handles) {
+			//reverse the array
+			return array_reverse($themeHandles);
+		}
+		$handles = array();
+		foreach($themeHandles as $handle) {
+			$handles[] = $handle->getThemeHandle();
+		}
+		return $handles;
 	}
 
 }
