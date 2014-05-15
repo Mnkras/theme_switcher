@@ -1,5 +1,4 @@
-<?php  
-defined('C5_EXECUTE') or die('Access Denied');
+<?php defined('C5_EXECUTE') or die('Access Denied');
 
 class ThemeSwitcher {
 
@@ -30,15 +29,25 @@ class ThemeSwitcher {
 		 Loader::model('page_theme'); 
 		//get the list of themes		
 		$themeHandles = PageTheme::getList();
+		
+		// Changed for alpha sort by JohnTheFish - make long lists easier to navigate
+		uasort($themeHandles, array('ThemeSwitcher', 'theme_sort'));
 		if(!$handles) {
-			//reverse the array
-			return array_reverse($themeHandles);
+			return $themeHandles;
 		}
+		
+		// just the handles
 		$handles = array();
 		foreach($themeHandles as $handle) {
 			$handles[] = $handle->getThemeHandle();
 		}
 		return $handles;
+	}
+	
+	public static function theme_sort($a,$b){
+		$a_name = $a->getThemeName();
+		$b_name = $b->getThemeName();
+		return strcasecmp ($a_name , $b_name);	
 	}
 
 }
