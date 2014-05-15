@@ -1,5 +1,7 @@
 <?php  defined('C5_EXECUTE') or die("Access Denied.");
-
+/*
+Added by John Liddiard (aka JohntheFish) www.c5magic.co.uk
+*/
 $form = Loader::helper('form');
 ?>
 
