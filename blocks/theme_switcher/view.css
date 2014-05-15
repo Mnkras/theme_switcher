@@ -1,0 +1,118 @@
+div.themeSwitcher form.theme-switcher h4,
+div.themeSwitcher form.theme-switcher select,
+div.themeSwitcher form.theme-switcher input
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	line-height:1;
+	font-style:normal;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+
+div.themeSwitcher form.theme-switcher {
+	-moz-border-radius: 5px!important;
+	-webkit-border-radius: 5px!important;
+	border-radius: 5px!important;
+	border:1px solid #666!important;
+	background-color:#EEE!important;
+	padding:5px!important;
+	margin:5px!important;
+	display:inline-block!important;
+	background-image:none!important;
+}
+
+div.themeSwitcher form.theme-switcher select{
+	width:250px!important;
+}
+
+div.themeSwitcher form.theme-switcher select,
+div.themeSwitcher form.theme-switcher select:hover,
+div.themeSwitcher form.theme-switcher option:hover,
+div.themeSwitcher form.theme-switcher option{
+	cursor:pointer!important;
+	display:inline-block!important;
+	font-family:Helvetica, Arial, "Sans-serif"!important;
+	text-decoration:none!important;
+	font-size:14px!important;
+	color:#555!important;
+	background-color:#DDD!important;
+	height:26px!important;
+	line-height:20px!important;
+	vertical-align:bottom!important;
+	padding:3px 5px 3px 5px!important;
+	margin-top:5px!important;
+	margin-bottom:5px!important;
+	margin-left:0!important;
+	margin-right:0!important;
+	border:1px solid #666!important;
+	-moz-border-radius: 3px!important;
+	-webkit-border-radius: 3px!important;
+	border-radius: 3px!important;
+	border-collapse:collapse!important;
+	box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+	-moz-box-shadow: none!important;
+	-moz-box-sizing: border-box!important;
+	-webkit-box-sizing: border-box!important;
+	box-sizing: border-box!important;
+	appearance:menu!important;
+	-moz-appearance:menu!important;
+	-webkit-appearance:menu!important;
+}
+div.themeSwitcher form.theme-switcher input,
+div.themeSwitcher form.theme-switcher input:hover{
+	cursor:pointer!important;
+	display:inline-block!important;
+	width:20px!important;
+	text-align:center!important;
+	font-family:Helvetica, Arial, "Sans-serif"!important;
+	font-weight:bold;
+	text-decoration:none!important;
+	font-size:14px!important;
+	color:#555!important;
+	background-color:#CCC!important;
+	height:26px!important;
+	line-height:20px!important;
+	vertical-align:bottom!important;
+	padding:3px 5px 3px 5px!important;
+	margin-top:5px!important;
+	margin-bottom:5px!important;
+	margin-left:0!important;
+	margin-right:0!important;
+	border:1px solid #666!important;
+	-moz-border-radius: 3px!important;
+	-webkit-border-radius: 3px!important;
+	border-radius: 3px!important;
+	border-collapse:collapse!important;
+	box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+	-moz-box-shadow: none!important;
+	-moz-box-sizing: border-box!important;
+	-webkit-box-sizing: border-box!important;
+	box-sizing: border-box!important;
+	appearance:button!important;
+	-moz-appearance:button!important;
+	-webkit-appearance:button!important;
+}
+div.themeSwitcher form.theme-switcher h2,
+div.themeSwitcher form.theme-switcher h3,
+div.themeSwitcher form.theme-switcher h4{
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+	font-family:Helvetica, Arial, "Sans-serif"!important;
+	color:#555!important;
+	width:auto!important;
+}
+div.themeSwitcher form.theme-switcher h2{
+	font-size:30px!important;
+}
+div.themeSwitcher form.theme-switcher h3{
+	font-size:22px!important;
+}
+div.themeSwitcher form.theme-switcher h3{
+	font-size:18px!important;
+}
