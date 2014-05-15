@@ -4,7 +4,7 @@ class ThemeSwitcherPackage extends Package {
 
 	protected $pkgHandle = 'theme_switcher';
 	protected $appVersionRequired = '5.5.0';
-	protected $pkgVersion = '1.5.1';
+	protected $pkgVersion = '1.6';
 
 	public function getPackageName() {
 		return t("Theme Switcher");
