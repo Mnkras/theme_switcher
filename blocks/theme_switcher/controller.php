@@ -8,7 +8,6 @@ class ThemeSwitcherBlockController extends BlockController {
 	protected $btTable = 'btThemeSwitcher';
 	protected $btInterfaceWidth = "420";
 	protected $btInterfaceHeight = "350";
-	protected $btWrapperClass = 'ccm-ui';
 
 	public function getBlockTypeName() {
 		return t("Theme Switcher");
@@ -19,7 +18,10 @@ class ThemeSwitcherBlockController extends BlockController {
 	}
 
 	function on_page_view(){
-		$this->addHeaderItem('<style type="text/css"> .themeSwitcher select{ margin-top: 10px;} </style>');
+		$page = Page::getCurrentPage();
+		if($page->isEditMode() || $page->isAdminArea()){
+			return;
+		}
 		$this->addHeaderItem($this->switcher_script());
 	}
 
