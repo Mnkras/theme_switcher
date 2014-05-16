@@ -6,7 +6,7 @@ Added by John Liddiard (aka JohntheFish) www.c5magic.co.uk
 $form = Loader::helper('form');
 ?>
 
-<div class="themeSwitcher">
+<div class="theme-switcher-reset">
 	<form method="post" action="<?php  echo $this->action('switch_theme')?>" class="theme-switcher">
 		<h4><?php  echo $title?></h4>
 		<select name="theme">
