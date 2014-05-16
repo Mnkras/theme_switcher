@@ -1,38 +1,41 @@
 <?php  defined('C5_EXECUTE') or die("Access Denied.");
 
 ?>
-<label>
-	<?php
-		echo t('Name:');
-	?>
-</label>
-<?php
-	echo $form->text('title', $title, array('style' => 'width: 220px'));
-?>
-<label style="margin-top:15px">
-	<?php
-		// Modified by JohnTheFish for autoplay timer
-		echo t('Auto switcher delay: ');
-	?>
-	<span class="my_auto_slider">
+<div class="ccm-ui">
+	<label>
 		<?php
-		if (!empty($auto)){
-		  echo $auto;
-		} else {
-		  echo '0';
-		}
+			echo t('Name:');
 		?>
-	</span>&nbsp;
+	</label>
 	<?php
-		echo t('seconds');
+		echo $form->text('title', $title, array('style' => 'width: 220px'));
 	?>
-</label>
+	<div style="clear:both;"></div>
+	<label style="margin-top:15px">
+		<?php
+			// Modified by JohnTheFish for autoplay timer
+			echo t('Auto switcher delay: ');
+		?>
+		<span class="my_auto_slider">
+			<?php
+			if (!empty($auto)){
+			  echo $auto;
+			} else {
+			  echo '0';
+			}
+			?>
+		</span>&nbsp;
+		<?php
+			echo t('seconds');
+		?>
+	</label>
 
-<?php
-echo $form->text('auto', $percentage_field, array('class'=>'my_auto_slider'));
-?>
+	<?php
+	echo $form->text('auto', $percentage_field, array('class'=>'my_auto_slider'));
+	?>
 
-<div class="my_auto_slider" style="margin:5px">
+	<div class="my_auto_slider" style="margin:5px">
+	</div>
 </div>
 <script type="text/javascript">
 (function($){
