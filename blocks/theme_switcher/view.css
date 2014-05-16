@@ -5,15 +5,29 @@ With a toolbar type control, the styles needed cleaning up across multiple theme
 It proved tougher than I thought and I am not sure I got absolutely everything. For example, cufon beats it.
 */
 
+
 /*
+Original defalt template
+*/
+div.themeSwitcher form.theme-switcher select{
+	width:175px!important;
+	margin-top: 10px;
+}
+
+
+
+
+/*
+Reset and extended templates...
+
 A little bit of reset
 */
-div.themeSwitcher form.theme-switcher,
-div.themeSwitcher form.theme-switcher h2,
-div.themeSwitcher form.theme-switcher h3,
-div.themeSwitcher form.theme-switcher h4,
-div.themeSwitcher form.theme-switcher select,
-div.themeSwitcher form.theme-switcher input
+div.theme-switcher-reset form.theme-switcher,
+div.theme-switcher-reset form.theme-switcher h2,
+div.theme-switcher-reset form.theme-switcher h3,
+div.theme-switcher-reset form.theme-switcher h4,
+div.theme-switcher-reset form.theme-switcher select,
+div.theme-switcher-reset form.theme-switcher input
 {
 	margin: 0;
 	padding: 0;
@@ -26,7 +40,7 @@ div.themeSwitcher form.theme-switcher input
 }
 
 
-div.themeSwitcher form.theme-switcher {
+div.theme-switcher-reset form.theme-switcher {
 	-moz-border-radius: 5px!important;
 	-webkit-border-radius: 5px!important;
 	border-radius: 5px!important;
@@ -38,14 +52,14 @@ div.themeSwitcher form.theme-switcher {
 	background-image:none!important;
 }
 
-div.themeSwitcher form.theme-switcher select{
+div.theme-switcher-reset form.theme-switcher select{
 	width:250px!important;
 }
 
-div.themeSwitcher form.theme-switcher select,
-div.themeSwitcher form.theme-switcher select:hover,
-div.themeSwitcher form.theme-switcher option:hover,
-div.themeSwitcher form.theme-switcher option{
+div.theme-switcher-reset form.theme-switcher select,
+div.theme-switcher-reset form.theme-switcher select:hover,
+div.theme-switcher-reset form.theme-switcher option:hover,
+div.theme-switcher-reset form.theme-switcher option{
 	cursor:pointer!important;
 	display:inline-block!important;
 	font-family:Helvetica, Arial, "Sans-serif"!important;
@@ -76,8 +90,8 @@ div.themeSwitcher form.theme-switcher option{
 	-moz-appearance:menu!important;
 	-webkit-appearance:menu!important;
 }
-div.themeSwitcher form.theme-switcher input,
-div.themeSwitcher form.theme-switcher input:hover{
+div.theme-switcher-reset form.theme-switcher input,
+div.theme-switcher-reset form.theme-switcher input:hover{
 	cursor:pointer!important;
 	display:inline-block!important;
 	width:20px!important;
@@ -111,21 +125,21 @@ div.themeSwitcher form.theme-switcher input:hover{
 	-moz-appearance:button!important;
 	-webkit-appearance:button!important;
 }
-div.themeSwitcher form.theme-switcher h2,
-div.themeSwitcher form.theme-switcher h3,
-div.themeSwitcher form.theme-switcher h4{
+div.theme-switcher-reset form.theme-switcher h2,
+div.theme-switcher-reset form.theme-switcher h3,
+div.theme-switcher-reset form.theme-switcher h4{
 	margin-top:5px !important;
 	margin-bottom:5px !important;
 	font-family:Helvetica, Arial, "Sans-serif"!important;
 	color:#555!important;
 	width:auto!important;
 }
-div.themeSwitcher form.theme-switcher h2{
+div.theme-switcher-reset form.theme-switcher h2{
 	font-size:30px!important;
 }
-div.themeSwitcher form.theme-switcher h3{
+div.theme-switcher-reset form.theme-switcher h3{
 	font-size:22px!important;
 }
-div.themeSwitcher form.theme-switcher h3{
+div.theme-switcher-reset form.theme-switcher h3{
 	font-size:18px!important;
 }
