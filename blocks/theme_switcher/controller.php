@@ -7,7 +7,7 @@ class ThemeSwitcherBlockController extends BlockController {
 
 	protected $btTable = 'btThemeSwitcher';
 	protected $btInterfaceWidth = "420";
-	protected $btInterfaceHeight = "350";
+	protected $btInterfaceHeight = "150";
 
 	public function getBlockTypeName() {
 		return t("Theme Switcher");
