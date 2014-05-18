@@ -6,6 +6,9 @@
 			<unsigned />
 		</field>
 		<field name="title" type="C" size="255" />
+		<field name="auto" type="I">
+			<unsigned />
+		</field>
 	</table>
 </schema>
 
