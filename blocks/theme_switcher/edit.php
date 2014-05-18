@@ -18,11 +18,10 @@
 		?>
 		<span class="my_auto_slider">
 			<?php
-			if (!empty($auto)){
-			  echo $auto;
-			} else {
-			  echo '0';
+			if (empty($auto)){
+			  $auto = 0;
 			}
+			echo $auto;
 			?>
 		</span>&nbsp;
 		<?php
@@ -31,7 +30,7 @@
 	</label>
 
 	<?php
-	echo $form->text('auto', $percentage_field, array('class'=>'my_auto_slider'));
+	echo $form->text('auto', $auto, array('class'=>'my_auto_slider'));
 	?>
 
 	<div class="my_auto_slider" style="margin:5px">
